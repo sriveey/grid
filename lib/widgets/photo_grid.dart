@@ -5,13 +5,13 @@ import 'dart:io';
 class PhotoGrid extends StatelessWidget {
   final List<Photo> photos;
 
-  PhotoGrid({required this.photos});
+  const PhotoGrid({super.key, required this.photos});
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.all(10),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         childAspectRatio: 4 / 5,
         crossAxisSpacing: 5,
